@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21223.12" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="DrankNow" representedClassName=".DrankNow" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="vessel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Vessel" inverseName="drankNow" inverseEntity="Vessel"/>
+    </entity>
+    <entity name="Vessel" representedClassName="Vessel" syncable="YES" codeGenerationType="class">
+        <attribute name="capacity" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="drankNow" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DrankNow" inverseName="vessel" inverseEntity="DrankNow"/>
+    </entity>
+    <elements>
+        <element name="Vessel" positionX="-63" positionY="-18" width="128" height="89"/>
+        <element name="DrankNow" positionX="-63" positionY="9" width="128" height="59"/>
+    </elements>
+</model>
